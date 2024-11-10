@@ -1,0 +1,209 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 70px;
+    background-color: #f4f4f4; /* Light gray background for main container */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: #222; /* Dark background for navbar */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: 600;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #555;
+}
+
+/* Section Styling */
+.section {
+    display: none;
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 40px 20px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    background-color: #fff; /* Default white background for sections */
+}
+
+/* Home Section Styling */
+#home {
+    background: linear-gradient(to bottom right, #007bff, #6c63ff); /* Blue gradient */
+    color: #301212;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#home h1, #home h3, #home span {
+    color: #fff;
+}
+
+#home .intro span {
+    color: #ffd700; /* Gold for emphasis */
+}
+
+#home .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid #fff;
+}
+
+/* About Section Styling */
+#about {
+    background-color: #ffdeeb; /* Light pink */
+    color: #333;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#about h1 {
+    color: #d6336c;
+}
+
+#about p, #about h3 {
+    color: #6a1b4d;
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #e0f7fa; /* Light cyan */
+    color: #004d40;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#skills h1 {
+    color: #00796b;
+}
+
+#skills h2 {
+    color: #004d40;
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #f3e5f5; /* Light purple */
+    color: #4a148c;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+#contact h1 {
+    color: #6a1b9a;
+}
+
+#contact p, #contact label {
+    color: #4a148c;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4a148c;
+}
+
+/* Button Styling */
+a.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffd700; /* Gold button */
+    color: #333;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+a.button:hover {
+    background-color: #ffbe33; /* Lighter gold on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Display Only Active Section */
+.section:target {
+    display: block;
+}
